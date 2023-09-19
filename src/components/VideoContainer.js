@@ -4,6 +4,8 @@ import VideoCard from './VideoCard';
 import{Link} from "react-router-dom";
 
 const VideoContainer = () => {
+  
+
   const[videos, setVideos] = useState(null);
 
   useEffect(() =>{
@@ -22,7 +24,7 @@ const VideoContainer = () => {
   return (
     <div className=' flex flex-wrap'>
       {(videos !== null) ? 
-      (videos.map((video) => (<Link to={"/watch?v=" + video.id}><VideoCard key={video.id} info = {video}/></Link>)))
+      (videos.map((video) => (<Link key={video.id} to={"/watch?v=" + video.id}><VideoCard  info = {video}/></Link>)))
        :
 
         ""
