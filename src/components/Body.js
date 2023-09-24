@@ -2,11 +2,13 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import { Outlet } from 'react-router-dom'
 
-const Body = () => {
+const Body = ({user}) => {
+  
+
   return (
     <div className='flex'>
       <Sidebar/>
-      <Outlet/>
+      <Outlet user = {user}/>
     </div>
   )
 }

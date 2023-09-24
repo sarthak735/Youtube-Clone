@@ -2,11 +2,11 @@ import React from 'react'
 import ButtonList from './ButtonList'
 import VideoContainer from './VideoContainer'
 
-const MainContainer = () => {
+const MainContainer = ({user}) => {
   return (
     <div>
       <ButtonList/>
-      <VideoContainer/>
+      <VideoContainer user= {user}/>
     </div>
   )
 }

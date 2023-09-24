@@ -6,6 +6,16 @@ import store from "./utils/store";
 import {Provider} from "react-redux"; 
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
+import VideoDeetsContext from "./utils/VideoDeetsContext";
+import { YT_VIDEO_API } from "./utils/constants";
+import { useState, useEffect } from "react";
+
+
+
+
+//   const [status, setStatus] = useState(false);
+//   const catchStatus = (status) => {}
+
 
 const appRouter = createBrowserRouter([{
   path: "/",
@@ -13,7 +23,9 @@ const appRouter = createBrowserRouter([{
   children: [
     {
       path: "/",
-      element: <MainContainer/>
+      element: <MainContainer user = {{
+        name : "Sarthak",
+      }}/>
     },
     {
       path: "/watch",
@@ -25,13 +37,29 @@ const appRouter = createBrowserRouter([{
 
 
 function App() {
+  const[videos, setVideos] = useState(null);
+
+  useEffect(() =>{
+    getVideos();
+  }, []) 
+
+  const getVideos = async () =>{
+    const data = await fetch (YT_VIDEO_API);
+    const json = await data.json();
+    //console.log(json.items);
+
+    setVideos(json.items);
+
+  }
   return (
+    <VideoDeetsContext.Provider value={{value:videos,status: null}}>
     <Provider store = {store}>
     <div>
       <Head/>
       <RouterProvider router={appRouter}/>
     </div>
     </Provider>
+    </VideoDeetsContext.Provider>
   );
 }
 

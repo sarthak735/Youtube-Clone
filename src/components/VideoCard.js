@@ -1,7 +1,7 @@
 import React from 'react'
 
 const VideoCard = (props) => {
-    console.log(props);
+    //console.log(props);
 
     //const{snippet, statistics} = info;
     //console.log(statistics);
@@ -18,6 +18,8 @@ const VideoCard = (props) => {
             <li className=' font-bold py-2'>{props.info.snippet.title}</li> 
             <li>{props.info.snippet.channelTitle}</li>
             <li>{props.info.statistics.viewCount} views</li>
+            {/* <li>{props.user.name} views</li> */}
+
             {/* <li>{props.info.snippet.publishedAt}</li> */}
         </ul>
     </div>

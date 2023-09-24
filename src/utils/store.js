@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit"
 import sidebarSlice from "./sidebarSlice";
-import searchSlice, { cacheResults } from "./searchSlice";
+import searchSlice from "./searchSlice";
 
 const store = configureStore({
     reducer: {
