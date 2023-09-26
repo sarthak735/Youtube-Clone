@@ -1,12 +1,7 @@
 import React from 'react'
 
 const VideoCard = (props) => {
-    //console.log(props);
-
-    //const{snippet, statistics} = info;
-    //console.log(statistics);
-    //const {channelTitle, title, publishedAt} = snippet || {}; 
-    //console.log(thumbnails);
+    
   return (
     <div className=' p-2 m-2 w-72 shadow-lg '>
             <div className='relative h-48 md:h-40 md:rounded-xl overflow-hidden'>

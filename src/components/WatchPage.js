@@ -72,10 +72,6 @@ const WatchPage = () => {
           
             <div className='flex ml-56'>
               <div className='col-span-10 pt-2 pr-2'>
-              {/* <input className='checked:grayscale-0' type="radio" name="radio" id="likeInput"/>
-  <label for="likeInput" className=" grayscale">
-    <img draggable="false" alt="likes" src="https://i.hizliresim.com/seigsy3.png" className=" checked:grayscale-0"/>
-  </label>  */}
 
 
                 <button onClick={onLikeButton} className=' rounded-2xl bg-gray-200 p-3 pb-2 rounded-l-full hover:bg-gray-100 '><img className=' w-7 ' alt='like' src='https://i.hizliresim.com/seigsy3.png'/></button>

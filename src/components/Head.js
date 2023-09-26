@@ -11,6 +11,7 @@ const Head = () => {
 
     const searchCache = useSelector((store) => store.search);
 
+    
     useEffect(() =>{
 
         const timer = setTimeout(() => {
@@ -23,6 +24,7 @@ const Head = () => {
         return ()=>{
             clearTimeout(timer);
         }
+        // eslint-disable-next-line
     }, [searchQuery])
 
 
@@ -68,7 +70,7 @@ const Head = () => {
                 />
                 <button className="border border-gray-600 p-2 rounded-r-full bg-gray-100">Search</button>
                 </div>
-                {showSuggestions && (<div className=" fixed bg-white px-5 py-2 w-auto">
+                {showSuggestions && (<div className="fixed bg-white px-5 py-2 w-auto">
                     <ul>
                         {suggestions.map((s) => <li  key = {s}className="py-2 px-3 shadow-sm hover:bg-gray-100">{s}</li>)}
                         

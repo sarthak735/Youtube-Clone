@@ -43,6 +43,8 @@ export const YT_SEARCH_API = "http://suggestqueries.google.com/complete/search?c
 
 export const COMMENT_API = "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=_VB39Jo8mAQ&key=" + YOUR_API_KEY;
 
+export const VIDEO_BY_CATEGORY = "https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN&key=" +YOUR_API_KEY;
+
 
 
 
