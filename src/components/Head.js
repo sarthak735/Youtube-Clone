@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/sidebarSlice";
+import { closeMenu } from "../utils/sidebarSlice";
+import { miniCloseMenu, miniToggleMenu } from "../utils/miniSideBarSlice";
 import { YT_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+
 
 const Head = () => {
     const[searchQuery, setSearchQuery] = useState("");
     const[suggestions, setSuggestions] = useState([]);
     const [showSuggestions, setShowSuggestions] = useState(false);
+    //const[isMiniSideBar, setIsminiSideBar] = useState(false);
 
     const searchCache = useSelector((store) => store.search);
+    //const miniSidebar = useSelector((store) => store.app1);
 
     
     useEffect(() =>{
+        dispatch(miniCloseMenu());
 
         const timer = setTimeout(() => {
             if(searchCache[searchQuery]){
@@ -43,8 +48,12 @@ const Head = () => {
     const dispatch = useDispatch();
 
     const toggleMenuHandler = () => {
-        dispatch(toggleMenu());
+        dispatch(closeMenu());
+        dispatch(miniToggleMenu());
+        
     };
+
+
 
     return(
         <div className="grid grid-flow-col p-2 m-2 shadow-lg">
@@ -59,6 +68,7 @@ const Head = () => {
                 alt="youtube-logo"
                 src="https://www.seekpng.com/png/detail/77-772362_youtube-logo-youtube-logo-png.png"/>
             </div>
+            
             <div className=" col-span-10 pl-64">
                 <div>
                 <input className=" w-1/2 border border-gray-400 p-2 rounded-l-full " 

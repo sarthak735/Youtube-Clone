@@ -35,7 +35,7 @@
 
 
 
-const YOUR_API_KEY = "AIzaSyDZtlncV4kkJjGY39lPmRtqIBeDL4y31fQ";
+export const YOUR_API_KEY = "AIzaSyDZtlncV4kkJjGY39lPmRtqIBeDL4y31fQ";
 
 export const YT_VIDEO_API = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" + YOUR_API_KEY;
 

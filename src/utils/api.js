@@ -1,22 +1,11 @@
-// import axios from "axios";
+import axios from "axios";
+import { YOUR_API_KEY } from "./constants";
 
-// const BASE_URL = "https://youtube138.p.rapidapi.com";
+const request  = axios.create({
+    baseURL: "https://youtube.googleapis.com/youtube/v3",
+    params : {
+        key : YOUR_API_KEY,
+    },
+})
 
-// const options = {
-//   params: {
-    
-//     hl: 'en',
-//     gl: 'US'
-//   },
-//   headers: {
-//     'X-RapidAPI-Key': '2f3c8322b1msh0b1b1109e3c62dap10d647jsn629362c355c3',
-//     'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
-//   }
-// };
-
-// export const fetchDataFromApi = async  (url) =>{
-//     const {data} = await axios.get(`${BASE_URL}/${url}`, options);
-//     return data;
-// }
-
-// //  
+export default request;

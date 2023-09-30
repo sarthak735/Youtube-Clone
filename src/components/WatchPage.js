@@ -18,7 +18,7 @@ const WatchPage = () => {
  
     const dispatch = useDispatch();
     
-    console.log(videos.value);
+    //console.log(videos.value);
 
     useEffect(() =>{
       

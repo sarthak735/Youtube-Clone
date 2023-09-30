@@ -16,7 +16,7 @@ const MainContainer = () => {
   const getByCategory = async () =>{
     const data = await fetch (VIDEO_BY_CATEGORY);
     const json = await data.json();
-    console.log(json.items.map(x => x.snippet.title));
+    //console.log(json.items.map(x => x.snippet.title));
 
     setByCategory(json.items);
   }

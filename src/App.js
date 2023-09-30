@@ -10,13 +10,6 @@ import VideoDeetsContext from "./utils/VideoDeetsContext";
 import { YT_VIDEO_API } from "./utils/constants";
 import { useState, useEffect } from "react";
 
-
-
-
-//   const [status, setStatus] = useState(false);
-//   const catchStatus = (status) => {}
-
-
 const appRouter = createBrowserRouter([{
   path: "/",
   element: <Body/>,

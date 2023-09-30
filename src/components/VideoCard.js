@@ -1,9 +1,8 @@
 import React from 'react'
 
 const VideoCard = (props) => {
-    
   return (
-    <div className=' p-2 m-2 w-72 shadow-lg '>
+    <div className=' p-2 m-2 w-80 shadow-lg '>
             <div className='relative h-48 md:h-40 md:rounded-xl overflow-hidden'>
               <img className='h-full w-full object-cover'
               alt='thumbnail_image'
